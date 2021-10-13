@@ -1,0 +1,20 @@
+BLE Zeit setzen
+
+1. Download <LightBlue> on Google Play
+2. Connect the Bluetooth device named <LilyGo-Watch >
+3. Slide to the bottom of the page, the attribute UUID is <beb5483e-36e1-4688-b7f5-ea07361b26a8>, then click it
+4. Select < UTF-8 String > in the Data format of the page
+5. Click the READ AGAIN button, it will return to the format requirements set for the first time,the default format is YY, MM, DD, H, M, S
+6. Under <WRITTEN VALUES>, fill in the time you need to set, such as : 2020, 08, 07, 11, 20, 30
+7. Click the <WRITE> button on the right, the time will be written into the watch
+
+
+Multithreading
+https://www.az-delivery.de/blogs/azdelivery-blog-fur-arduino-und-raspberry-pi/esp32-nutzung-beider-cpu-kerne-fuer-eigene-projekte
+xTaskCreatePinnedToCore (
+    CoreTask0, / - Task function to be called - /
+    "Task1", ​​/ - Name of the task Any Name- /
+    1000, / - available heap memory of the task - /
+    NULL, / - possibly parameter of the task - /
+    1, / - task priority - /
+    & Core0TaskHnd, / - used task handle - /
